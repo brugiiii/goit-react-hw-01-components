@@ -12,13 +12,8 @@
 
 .status {
   border-radius: 50%;
-  background-color: tomato;
   width: 10px;
   height: 10px;
-}
-
-.status.true {
-  background-color: lime;
 }
 
 .name {
