@@ -1,19 +1,22 @@
-import css from './FriendListItem.module.css';
+import PropTypes from 'prop-types';
+import { Item, Status, Name, Avatar } from './FriendListItem.styled';
 
 function FriendListItem({ avatar, name, isOnline }) {
-  const bgColor = {
-    backgroundColor: isOnline ? 'lime' : 'tomato',
-  };
-
   return (
-    <li className={css.item}>
-      <span style={bgColor} className={css.status}></span>
-      <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
-      <p className={css.name}>{name}</p>
-    </li>
+    <Item>
+      <Status status={isOnline}></Status>
+      <Avatar src={avatar} alt="User avatar" />
+      <Name>{name}</Name>
+    </Item>
   );
 }
 
 // Тут не описую проп тайпи, адже уже описав всі ці данні у файлі FriendList.js
 
 export default FriendListItem;
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};

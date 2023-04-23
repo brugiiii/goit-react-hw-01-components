@@ -1,8 +1,8 @@
 // data
-import user from './data/user';
-import data from './data/data';
-import friends from './data/friends';
-import transactions from './data/transactions';
+import user from '../data/user';
+import data from '../data/data';
+import friends from '../data/friends';
+import transactions from '../data/transactions';
 // components
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
